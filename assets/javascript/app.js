@@ -5,8 +5,9 @@ function createButtons() {
      $("#animal-view").empty();    
     for (var i = 0; i < animals.length; i++) { 
      var a = $("<button>");    
-      a.addClass("btn btn-outline-primary");
+      a.addClass("btn btn-outline-primary button");
       a.attr("data-name", animals[i]);
+      
       a.text(animals[i]);
       $("#animal-view").append(a);
     }
@@ -28,7 +29,7 @@ function createButtons() {
 
 
  //this function saves the data-name of the button clicked and stores into a variable so it creates the URL
- $("button").on("click", function() {
+ $(document).on("click", "button", function() {
 
  var animalClicked = $(this).attr("data-name");
  console.log(animalClicked);
