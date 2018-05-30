@@ -32,6 +32,7 @@ function createButtons() {
  $(document).on("click", "button", function() {
 
  var animalClicked = $(this).attr("data-name");
+ $("#giphy-animals").empty();
  console.log(animalClicked);
 
 
